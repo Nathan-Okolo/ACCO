@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | A-COO Edu Consults</title>
+  <meta name="description" content="Learn about A-COO Edu Consults — our story, our founder, our expert team, and the vision driving us to help students and businesses succeed." />
+  <link rel="icon" href="img/logo.jpeg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Founder section */
+    .founder-section { background: var(--white); }
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .founder-images {
+      position: relative;
+      aspect-ratio: 1/1;
+    }
+    .founder-img-main {
+      position: absolute;
+      top: 8%;
+      left: 8%;
+      width: 78%;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-xl);
+    }
+    .founder-img-secondary {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 42%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .founder-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .cred-badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      letter-spacing: 0.04em;
+    }
+    .founder-quote {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #0f5fb6 100%);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .founder-quote::before {
+      content: '"';
+      position: absolute;
+      top: -0.5rem;
+      left: 1.5rem;
+      font-size: 5rem;
+      color: rgba(255,255,255,0.15);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .founder-quote p {
+      color: rgba(255,255,255,0.9);
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Team member detail card (modal-like hover) */
+    .team-responsibilities {
+      display: none;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      margin-top: 0.75rem;
+    }
+    .team-responsibilities ul {
+      padding-left: 1rem;
+    }
+    .team-responsibilities li {
+      list-style: disc;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+    .team-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+    }
+    .team-toggle svg { width: 1rem; height: 1rem; transition: transform 0.2s; }
+    .team-toggle.open svg { transform: rotate(180deg); }
+    @media (max-width:768px) {
+      .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .founder-images { aspect-ratio: 4/3; max-width: 480px; margin: 0 auto; }
+    }
+  </style>
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;s1.src='https://embed.tawk.to/64f9f19aa91e863a5c123aad/1h9o5fhi2';
+    s1.charset='UTF-8';s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);})();
+  </script>
+</head>
+<body>
+
+<!-- ============================================================ NAVBAR ============================================================ -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="img/logo.jpeg" alt="A-COO Edu Consults Logo" onerror="this.style.display='none'" />
+      <span>A-COO Edu Consults</span>
+    </a>
+    <div class="navbar-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item">
+          <a href="index.html#services" class="nav-link dropdown-trigger">Services<svg fill="none" viewBox="0 0 16 16"><path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="service.html" class="dropdown-item">Research &amp; Research Analyses</a>
+            <a href="service1.html" class="dropdown-item">Admissions &amp; International Studies</a>
+            <a href="service2.html" class="dropdown-item">Jobs &amp; Career Assistant</a>
+            <a href="service3.html" class="dropdown-item">Academic &amp; Publication Assistant</a>
+            <a href="service4.html" class="dropdown-item">Business Partnership &amp; Assistant</a>
+            <a href="service5.html" class="dropdown-item">Digital &amp; Distant Learning</a>
+            <a href="service6.html" class="dropdown-item">Study Loan &amp; Finance</a>
+            <a href="service7.html" class="dropdown-item">Accounts &amp; Financial Services</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link dropdown-trigger">Pages<svg fill="none" viewBox="0 0 16 16"><path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="faq.html" class="dropdown-item">FAQ</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+            <a href="course/courses.html" class="dropdown-item">Courses</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="contact.html" class="btn btn-primary btn-sm navbar-cta">Contact Us<svg fill="none" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></a>
+      <button class="navbar-toggle" id="nav-toggle" aria-label="Open menu"><svg fill="none" viewBox="0 0 24 24"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="navbar-logo"><img src="img/logo.jpeg" alt="A-COO" onerror="this.style.display='none'" style="height:42px;width:auto;" /><span>A-COO Edu Consults</span></a>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu"><svg fill="none" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></button>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link active">About</a>
+    <div class="mobile-nav-group">
+      <div class="mobile-nav-group-label">Services<svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></div>
+      <div class="mobile-sub-links">
+        <a href="service.html" class="mobile-sub-link">Research &amp; Analyses</a>
+        <a href="service1.html" class="mobile-sub-link">Admissions &amp; International Studies</a>
+        <a href="service2.html" class="mobile-sub-link">Jobs &amp; Career Assistant</a>
+        <a href="service3.html" class="mobile-sub-link">Academic &amp; Publication</a>
+        <a href="service4.html" class="mobile-sub-link">Business Partnership</a>
+        <a href="service5.html" class="mobile-sub-link">Digital &amp; Distant Learning</a>
+        <a href="service6.html" class="mobile-sub-link">Study Loan &amp; Finance</a>
+        <a href="service7.html" class="mobile-sub-link">Accounts &amp; Financial Services</a>
+      </div>
+    </div>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
+  <div class="mobile-nav-footer"><a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Us</a></div>
+</div>
+
+<!-- ============================================================ PAGE HERO ============================================================ -->
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <h1 class="fade-up">About Us</h1>
+    <nav class="breadcrumb fade-up stagger-1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <svg fill="none" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+      <span>About</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================================================ ABOUT COMPANY ============================================================ -->
+<section class="about-section section-pad-lg">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images fade-in">
+        <img class="about-img-main"
+          src="https://img.freepik.com/free-photo/outdoor-shot-mixed-race-couple-have-attentive-looks-into-laptop-computer_273609-43641.jpg"
+          alt="A-COO team at work" loading="lazy" />
+        <img class="about-img-secondary"
+          src="https://img.freepik.com/free-photo/cheerful-young-man-wearing-cap-using-laptop-computer_171337-17912.jpg"
+          alt="Student success" loading="lazy" />
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-text fade-up stagger-2">
+        <div class="section-label">About A-COO</div>
+        <h2>A Contemporary <span>Consulting Firm</span> Built on Results</h2>
+        <p>We are a contemporary education and business consulting firm established in <strong>2015</strong>, with a specialty in delivering educational services that transform lives. Our consult is inspired by quality, integrity, transparency, and accountability.</p>
+        <div class="vision-cards">
+          <div class="vision-card">
+            <h5>Our Vision</h5>
+            <p>To be the foremost solution provider for creating business and educational visions.</p>
+          </div>
+          <div class="vision-card">
+            <h5>Our Mission</h5>
+            <p>To create your vision through value — when you succeed, we succeed.</p>
+          </div>
+        </div>
+        <div class="checklist">
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>Research &amp; analyses (qualitative, quantitative, thematic)</div>
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>Academic proposals, theses &amp; dissertations</div>
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>Admissions &amp; scholarship applications (Nigeria &amp; UK)</div>
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>Career progress consulting &amp; services</div>
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>Business plans, proposals &amp; partnerships</div>
+          <div class="checklist-item"><div class="check-icon"><svg fill="none" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>General business &amp; education expert advisory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ STATS ============================================================ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up stagger-1">
+        <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div>
+        <div class="stat-number" data-target="9" data-suffix="+">0+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item fade-up stagger-2">
+        <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div>
+        <div class="stat-number" data-target="23">0</div>
+        <div class="stat-label">Expert Advisors</div>
+      </div>
+      <div class="stat-item fade-up stagger-3">
+        <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div>
+        <div class="stat-number" data-target="201" data-suffix="+">0+</div>
+        <div class="stat-label">Enrolled Students</div>
+      </div>
+      <div class="stat-item fade-up stagger-4">
+        <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div>
+        <div class="stat-number" data-target="421" data-suffix="+">0+</div>
+        <div class="stat-label">Research &amp; Analyses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOUNDER ============================================================ -->
+<section class="founder-section section-pad-lg">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-images fade-in">
+        <img class="founder-img-main" src="img/boss1.jpeg" alt="Anthony Chikaodiri Oko — Founder" loading="lazy" onerror="this.src='https://img.freepik.com/free-photo/confident-businessman-using-laptop-office_23-2148286613.jpg'" />
+        <img class="founder-img-secondary" src="img/boss2.jpeg" alt="Founder" loading="lazy" onerror="this.style.display='none'" />
+      </div>
+      <div class="about-text fade-up stagger-2">
+        <div class="section-label">Our Founder</div>
+        <h2>Anthony Chikaodiri <span>Oko</span></h2>
+        <div class="founder-creds">
+          <span class="cred-badge">ACFE</span>
+          <span class="cred-badge">ACA</span>
+          <span class="cred-badge">AICPA</span>
+          <span class="cred-badge">ANIM</span>
+          <span class="cred-badge">CISMI</span>
+          <span class="cred-badge">MCLJ</span>
+          <span class="cred-badge">MSc</span>
+          <span class="cred-badge">PG. Dip</span>
+          <span class="cred-badge">TRCN</span>
+          <span class="cred-badge">M.Edu</span>
+          <span class="cred-badge">LLM</span>
+        </div>
+        <p>He is an Accountant, Manager, Researcher, Educational Consultant, Criminal Justice Lawyer, and Forensic Fraud Examiner. He is also a Board member of Teenovative Africa — an NGO focused on teen education and promoting young talent.</p>
+        <div class="founder-quote">
+          <p>"For us at A-COO Consults, getting the right direction and accessing quality service for effective and efficient delivery is our priority. This consult is inspired by quality, integrity, transparency and accountability."</p>
+        </div>
+        <p>Our focal point is to succeed by making you successful in your demand. There is no limit to what we can assist you with educationally and business-wise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TEAM ============================================================ -->
+<section class="team-section section-pad-lg" id="team">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">The People Behind the Mission</div>
+      <h2>Meet Our <span>Expert Team</span></h2>
+      <p>Dedicated professionals committed to helping you achieve your educational and business goals.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- === EXISTING TEAM MEMBERS === -->
+
+      <div class="team-card fade-up stagger-1">
+        <div class="team-card-photo">
+          <img src="img/2.jpg" alt="Chukwuemeka Oko-Otu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Chukwuemeka Oko-Otu</div>
+          <div class="team-card-role">Research Lead — Arts &amp; Humanities</div>
+          <div class="team-card-qual">CEO, Back to School Initiative · Doctoral Researcher, University of Buckingham</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-2">
+        <div class="team-card-photo">
+          <img src="img/3.jpg" alt="Fredrick O. Otu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Fredrick O. Otu</div>
+          <div class="team-card-role">Team Manager — Science Research</div>
+          <div class="team-card-qual">Expert researcher and science team lead</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-3">
+        <div class="team-card-photo">
+          <img src="img/4.jpg" alt="Harrison Mmaduabuchi" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Harrison Mmaduabuchi</div>
+          <div class="team-card-role">Corporate Partner &amp; Director of International Schools Partnership</div>
+          <div class="team-card-qual">International education partnerships specialist</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-4">
+        <div class="team-card-photo">
+          <img src="img/vt.jpg" alt="Ogani Solomon Chidolu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Ogani Solomon Chidolu</div>
+          <div class="team-card-role">Administrator</div>
+          <div class="team-card-qual">Operations and administrative management</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-5">
+        <div class="team-card-photo">
+          <img src="img/6.jpg" alt="Mrs. Cynthia Chizoba Ozubbu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Mrs. Cynthia Chizoba Ozubbu</div>
+          <div class="team-card-role">GM Marketing &amp; Director, Finance &amp; Loans</div>
+          <div class="team-card-qual">Marketing strategy and financial services director</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-6">
+        <div class="team-card-photo">
+          <img src="img/gt.png" alt="Ucha Chukwuemeka" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Ucha Chukwuemeka</div>
+          <div class="team-card-role">Administrator</div>
+          <div class="team-card-qual">Administrative and operational support</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-7">
+        <div class="team-card-photo">
+          <img src="img/8.jpeg" alt="Ochoko Peter" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Ochoko Peter</div>
+          <div class="team-card-role">Senior Software Engineer</div>
+          <div class="team-card-qual">Senior Software Engineer at Xend Finance</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-8">
+        <div class="team-card-photo">
+          <img src="img/7.jpeg" alt="Otta Enya Ifeanyi Chukwu ACA" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Otta Enya Ifeanyi Chukwu ACA</div>
+          <div class="team-card-role">Director — Accounting &amp; Finance Services</div>
+          <div class="team-card-qual">Chartered Accountant · Director, A-COO Accounting &amp; Finance</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-1">
+        <div class="team-card-photo">
+          <img src="img/9.jpeg" alt="Andrew Nwanakwaugwu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Andrew Nwanakwaugwu MBC S</div>
+          <div class="team-card-role">Director of International Studies &amp; Migration</div>
+          <div class="team-card-qual">International studies and migration advisory specialist</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-2">
+        <div class="team-card-photo">
+          <img src="img/10.jpeg" alt="Ituma Nnabueze" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Ituma Nnabueze</div>
+          <div class="team-card-role">Research Assistant</div>
+          <div class="team-card-qual">Academic research support and assistance</div>
+        </div>
+      </div>
+
+      <div class="team-card fade-up stagger-3">
+        <div class="team-card-photo">
+          <img src="img/kt.jpg" alt="Ibe Kizito" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent"></div>
+          <div class="team-card-name">Ibe Kizito</div>
+          <div class="team-card-role">Media &amp; Online Manager</div>
+          <div class="team-card-qual">CEO, Baze City Media · Digital &amp; Online Strategy</div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           NEW TEAM MEMBERS (5 new additions)
+           ============================================================ -->
+
+      <!-- NEW 1: Dorcas Ugomma Chukwu -->
+      <div class="team-card fade-up stagger-4">
+        <div class="team-card-photo">
+          <img src="img/team/dorcas.jpg" alt="Dorcas Ugomma Chukwu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent" style="background:var(--orange);"></div>
+          <div class="team-card-name">Dorcas Ugomma Chukwu</div>
+          <div class="team-card-role" style="color:var(--orange);">Social Media Manager</div>
+          <div class="team-card-qual">BSc. Biochemistry (UNN) · Dip. Data Processing &amp; Mgt (Davsoft)</div>
+          <div class="team-responsibilities" id="resp-dorcas">
+            <ul>
+              <li>Manage and maintain social media platforms</li>
+              <li>Develop and execute social media strategies to increase brand awareness and engagement</li>
+              <li>Create content and monitor &amp; track page performance</li>
+              <li>Engage with online audience — responding to comments, messages, and inquiries promptly</li>
+              <li>Collaborate with the marketing/media team to promote educational programs, events and services</li>
+            </ul>
+          </div>
+          <button class="team-toggle" onclick="toggleResp('dorcas', this)">
+            View Responsibilities <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- NEW 2: James Peter Tochukwu -->
+      <div class="team-card fade-up stagger-5">
+        <div class="team-card-photo">
+          <img src="img/team/james.jpg" alt="James Peter Tochukwu" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent" style="background:var(--green);"></div>
+          <div class="team-card-name">James Peter Tochukwu</div>
+          <div class="team-card-role" style="color:var(--green);">Graphic Designer</div>
+          <div class="team-card-qual">Bachelor of Law (EBSU)</div>
+          <div class="team-responsibilities" id="resp-james">
+            <ul>
+              <li>Designs flyers for weekly and general publication</li>
+              <li>Interprets the company's memo into visually appealing designs for publication</li>
+            </ul>
+          </div>
+          <button class="team-toggle" onclick="toggleResp('james', this)">
+            View Responsibilities <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- NEW 3: Alhagie Kebba Jabang -->
+      <div class="team-card fade-up stagger-6">
+        <div class="team-card-photo">
+          <img src="img/team/alhagie.jpg" alt="Alhagie Kebba Jabang" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent" style="background:#9b59b6;"></div>
+          <div class="team-card-name">Alhagie Kebba Jabang</div>
+          <div class="team-card-role" style="color:#9b59b6;">Admissions Agent/Counsellor &amp; Branch Manager, The Gambia</div>
+          <div class="team-card-qual">BSc. Accounting and Finance</div>
+          <div class="team-responsibilities" id="resp-alhagie">
+            <ul>
+              <li>Overseeing regional operations in The Gambia</li>
+              <li>Advising students on suitable universities, courses, entry requirements, fees, scholarships, and career options</li>
+              <li>Assisting with document preparation, application submission, follow-ups, offer acceptance, and meeting admission conditions</li>
+              <li>Providing guidance on the Student visa process, accommodation, travel, and other pre-study preparations</li>
+            </ul>
+          </div>
+          <button class="team-toggle" onclick="toggleResp('alhagie', this)">
+            View Responsibilities <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- NEW 4: Chukwu Doris Ogeri -->
+      <div class="team-card fade-up stagger-7">
+        <div class="team-card-photo">
+          <img src="img/team/doris.jpg" alt="Chukwu Doris Ogeri" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent" style="background:#16a085;"></div>
+          <div class="team-card-name">Chukwu Doris Ogeri</div>
+          <div class="team-card-role" style="color:#16a085;">Admissions Agent / Counsellor</div>
+          <div class="team-card-qual">BSc. Education Biology (UNIMAID)</div>
+          <div class="team-responsibilities" id="resp-doris">
+            <ul>
+              <li>Advising students on suitable universities, courses, entry requirements, fees, scholarships, and career options</li>
+              <li>Assisting with document preparation, application submission, follow-ups, offer acceptance, and meeting admission conditions</li>
+              <li>Providing guidance on the Student visa process, accommodation, travel, and other pre-study preparations</li>
+            </ul>
+          </div>
+          <button class="team-toggle" onclick="toggleResp('doris', this)">
+            View Responsibilities <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- NEW 5: Anthony Chukwudi Nwakpa -->
+      <div class="team-card fade-up stagger-8">
+        <div class="team-card-photo">
+          <img src="img/team/anthony_n.jpg" alt="Anthony Chukwudi Nwakpa" loading="lazy" />
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-accent" style="background:#e74c3c;"></div>
+          <div class="team-card-name">Anthony Chukwudi Nwakpa</div>
+          <div class="team-card-role" style="color:#e74c3c;">Admissions Agent/Counsellor &amp; Branch Manager, Nigeria</div>
+          <div class="team-card-qual">Bachelor of Medical Laboratory Science</div>
+          <div class="team-responsibilities" id="resp-anthony_n">
+            <ul>
+              <li>Overseeing operations in Nigeria</li>
+              <li>Advising students on suitable universities, courses, entry requirements, fees, scholarships, and career options</li>
+              <li>Assisting with document preparation, application submission, follow-ups, offer acceptance, and meeting admission conditions</li>
+              <li>Providing guidance on the Student visa process, accommodation, travel, and other pre-study preparations</li>
+            </ul>
+          </div>
+          <button class="team-toggle" onclick="toggleResp('anthony_n', this)">
+            View Responsibilities <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /team-grid -->
+  </div>
+</section>
+
+<!-- ============================================================ PARTNERS ============================================================ -->
+<section class="partners-section section-pad">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Our Network</div>
+      <h2>Our <span>Partners</span></h2>
+    </div>
+    <div class="partners-grid">
+      <img src="img/p1.jpeg" alt="Partner 1" class="partner-logo fade-in stagger-1" loading="lazy" />
+      <img src="img/p2.jpeg" alt="Partner 2" class="partner-logo fade-in stagger-2" loading="lazy" />
+      <img src="img/p3.jpeg" alt="Partner 3" class="partner-logo fade-in stagger-3" loading="lazy" />
+      <img src="img/p4.jpeg" alt="Partner 4" class="partner-logo fade-in stagger-4" loading="lazy" />
+      <img src="img/p5.jpeg" alt="Partner 5" class="partner-logo fade-in stagger-5" loading="lazy" />
+      <img src="img/mt.jpg" alt="Partner 6" class="partner-logo fade-in stagger-6" loading="lazy" />
+      <img src="img/rt.jpg" alt="Partner 7" class="partner-logo fade-in stagger-7" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.jpeg" alt="A-COO Edu Consults" onerror="this.style.display='none'" />
+        <p>At A-COO Edu Consult, your success is our priority. Established 2015, we serve clients across Nigeria, the UK, The Gambia and beyond.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100077806414902" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="faq.html">FAQ</a>
+          <a href="testimonial.html">Testimonials</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="service.html">Research &amp; Analyses</a>
+          <a href="service1.html">Admissions &amp; Studies</a>
+          <a href="service2.html">Jobs &amp; Career</a>
+          <a href="service4.html">Business Partnership</a>
+          <a href="service5.html">Distant Learning</a>
+          <a href="service7.html">Financial Services</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>info@acooconsults.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>+44 7355 871566 (UK)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 A-COO Edu Consults. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float">
+  <a href="https://api.whatsapp.com/send?phone=+447355871566" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L0 24l6.338-1.51A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.882 9.882 0 01-5.036-1.378l-.36-.214-3.735.89.923-3.635-.235-.373A9.883 9.883 0 012.118 12C2.118 6.527 6.527 2.118 12 2.118S21.882 6.527 21.882 12 17.473 21.882 12 21.882z"/></svg>
+  </a>
+</div>
+
+<!-- Back to top -->
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg fill="none" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</a>
+
+<script>
+function toggleResp(id, btn) {
+  const el = document.getElementById('resp-' + id);
+  if (!el) return;
+  const isOpen = el.style.display === 'block';
+  el.style.display = isOpen ? 'none' : 'block';
+  btn.classList.toggle('open', !isOpen);
+  btn.childNodes[0].textContent = isOpen ? 'View Responsibilities ' : 'Hide Responsibilities ';
+}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
