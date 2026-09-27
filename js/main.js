@@ -97,32 +97,34 @@ document.addEventListener('DOMContentLoaded', () => {
       active = index;
     }
 
+    // Scroll within the track container only (not the whole page)
+    function scrollToCard(index) {
+      if (!cards[index]) return;
+      const card = cards[index];
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
+      const scrollTarget = track.scrollLeft + (cardRect.left - trackRect.left);
+      track.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+      setDot(index);
+    }
+
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
-        if (cards[i]) {
-          cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-          setDot(i);
-        }
+        scrollToCard(i);
       });
     });
 
     // Auto scroll testimonials
     let autoInterval = setInterval(() => {
       const next = (active + 1) % dots.length;
-      if (cards[next]) {
-        cards[next].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-        setDot(next);
-      }
+      scrollToCard(next);
     }, 4500);
 
     track.addEventListener('mouseenter', () => clearInterval(autoInterval));
     track.addEventListener('mouseleave', () => {
       autoInterval = setInterval(() => {
         const next = (active + 1) % dots.length;
-        if (cards[next]) {
-          cards[next].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-          setDot(next);
-        }
+        scrollToCard(next);
       }, 4500);
     });
   }

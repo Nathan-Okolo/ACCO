@@ -1,681 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>A-COO Website</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="" name="keywords" />
-  <meta content="" name="description" />
-
-  <!-- Favicon -->
-  <link href="./img/logo.jpeg" rel="icon" />
-
-  <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-    rel="stylesheet" />
-
-  <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-
-  <!-- Libraries Stylesheet -->
-  <link href="lib/animate/animate.min.css" rel="stylesheet" />
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
-</head>
-
-<body>
-  <!-- Spinner Start -->
-  <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner"></div>
-  </div>
-  <!-- Spinner End -->
-
-  <!-- Navbar Start -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions | A-COO Edu Consults</title>
+  <meta name="description" content="Find answers to frequently asked questions about A-COO Edu Consults — our services, admissions, costs, and how we can help you succeed." />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    @media (max-width: 991.98px) {
-      .navbar-nav .d-none {
-        display: none !important;
-      }
-    }
-  </style>
-  <div class="container-fluid nav-bar bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-      <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-        <img src="./img/logo.jpeg" width="60" height="60" alt="company's logo" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav me-auto">
-          <img src="./img/logo.jpeg" width="60" height="60" alt="company's logo" class="d-none d-lg-block" />
-        </div>
-        <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 d-flex align-items-center">
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="about.html" class="nav-item nav-link active">About</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-            <div class="dropdown-menu fade-up m-0">
-              <a href="service.html" class="dropdown-item">Research and research analyses
-              </a>
-              <a href="service1.html" class="dropdown-item">Admissions and International Studies</a>
-              <a href="service2.html" class="dropdown-item">Jobs and Career Assistant</a>
-              <a href="service3.html" class="dropdown-item">Academic and Publication Assistant
-              </a>
-              <a href="service4.html" class="dropdown-item">Business Partnership and Business Assistant</a>
-              <a href="service5.html" class="dropdown-item">
-                Digital class and Distant Learning Programs.</a>
-              <a href="service6.html" class="dropdown-item">
-                Study Loan and Finance.</a>
-            </div>
-          </div>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-            <div class="dropdown-menu fade-up m-0">
-              
-              <a href="faq.html" class="dropdown-item">Faq</a>
-              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-            </div>
-          </div>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- Navbar End -->
-
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header mb-5 py-5">
-    <div class="container">
-      <h1 class="display-3 text-white mb-3 animated slideInDown">
-        Frequently Asked Questions
-      </h1>
-      <nav aria-label="breadcrumb animated slideInDown">
-        <ol class="breadcrumb text-uppercase">
-          <li class="breadcrumb-item">
-            <a class="text-white" href="index.html">Home</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a class="text-white" href="#">Pages</a>
-          </li>
-          <li class="breadcrumb-item text-white active" aria-current="page">
-            FAQ
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <!-- Page Header End -->
-
-  <!-- Full Screen Search Start -->
-  <div class="modal fade" id="searchModal" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content" style="background: rgba(9, 30, 62, 0.7)">
-        <div class="modal-header border-0">
-          <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body d-flex align-items-center justify-content-center">
-          <div class="input-group" style="max-width: 600px">
-            <input type="text" class="form-control bg-transparent border-primary p-3"
-              placeholder="Type search keyword" />
-            <button class="btn btn-primary px-4">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Full Screen Search End -->
-
-  <!-- Blog Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-8">
-          <!-- Blog Detail Start -->
-          <div class="mb-5">
-            <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt="" />
-            <h1 class="mb-4">
-              Frequently Asked Questions
-            </h1>
-            <!-- <p>
-                While different schools have different demands and requirements
-                for postgraduate studies, the following are basic steps towards
-                successful admission to a higher education programme as an
-                international student. (Note that the undergraduate studies
-                application is done through the UCAS portal.)
-              </p>
- -->
-
-            <h3>1. What services do you render? </h3>
-            <p>
-              We are an experienced and licenced educational and business consultancy with a speciality in research,
-              local and international studies, educational content, and service including materials, visas and training,
-              business management, advisory, assessments and evaluation as well as accounting and marketing services.
-            </p>
-
-
-            <h3>2. What Countries do you cover for international Studies? </h3>
-            <p>
-              Our destinations and areas of coverage are Nigeria, Ghana, South Africa, the United States (US),
-              Australia, the United Kingdom (UK), Canada, and the Netherlands.
-            </p>
-
-            <h3>3. What is the mode of your services?</h3>
-            <p>
-              Our services are both face-to-face and virtual consultation, assistance for all services and we provide
-              24/7 customer service as well as chatbot assistance on our website at <a
-                href="http://www.acooconsult.com ">www.acooconsult.com </a>
-            </p>
-
-            <h3>4. What services are included in admission for international study services? </h3>
-            <p>
-              We provide a tailored career and university choice guide based on your peculiarity and situation. We
-              recommend courses and institutions based on proximity, choice of the client and suitability based on
-              clients' conditions, demands and academic prospects. Thus, we provide a review of
-            </p>
-            <ol>
-              <li>CV and Resume </li>
-              <li>Statement of Purpose (SOP) and Personal Statement (PS)</li>
-              <li>Form fillings</li>
-              <li>Application submission </li>
-              <li>Document review, scanning and uploads.</li>
-              <li>Gathering and validation of admission and visa documents</li>
-              <li>Scholarship advisory and funding counselling </li>
-            </ol>
-
-            <h3>5. What is the cost of service? </h3>
-            <p>
-              All services relating to international studies applications are FREE EXCEPT application fees charged by
-              some schools in the US and Canada.
-            </p>
-          </div>
-          <!-- Blog Detail End -->
-
-          <!-- Comment List Start -->
-          <!-- <div class="mb-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">3 Comments</h3>
-                        </div>
-                        <div class="d-flex mb-4">
-                            <img src="img/user.jpg" class="img-fluid rounded" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed eirmod</p>
-                                <button class="btn btn-sm btn-light">Reply</button>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-4">
-                            <img src="img/user.jpg" class="img-fluid rounded" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed eirmod</p>
-                                <button class="btn btn-sm btn-light">Reply</button>
-                            </div>
-                        </div>
-                        <div class="d-flex ms-5 mb-4">
-                            <img src="img/user.jpg" class="img-fluid rounded" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed eirmod</p>
-                                <button class="btn btn-sm btn-light">Reply</button>
-                            </div>
-                        </div>
-                    </div> -->
-          <!-- Comment List End -->
-
-          <!-- Comment Form Start -->
-          <div class="bg-light rounded p-5">
-            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-              <h3 class="mb-0">Leave A Comment</h3>
-            </div>
-            <form>
-              <div class="row g-3">
-                <div class="col-12 col-sm-6">
-                  <input type="text" class="form-control bg-white border-0" placeholder="Your Name"
-                    style="height: 55px" />
-                </div>
-                <div class="col-12 col-sm-6">
-                  <input type="email" class="form-control bg-white border-0" placeholder="Your Email"
-                    style="height: 55px" />
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control bg-white border-0" placeholder="Website"
-                    style="height: 55px" />
-                </div>
-                <div class="col-12">
-                  <textarea class="form-control bg-white border-0" rows="5" placeholder="Comment"></textarea>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary w-100 py-3" type="submit">
-                    Leave Your Comment
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- Comment Form End -->
-        </div>
-
-        <!-- Sidebar Start -->
-        <div class="col-lg-4">
-          <!-- Search Form Start -->
-          <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-            <div class="input-group">
-              <input type="text" class="form-control p-3" placeholder="Keyword" />
-              <button class="btn btn-primary px-4">
-                <i class="bi bi-search"></i>
-              </button>
-            </div>
-          </div>
-          <!-- Search Form End -->
-
-          <!-- Category Start -->
-          <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-              <h3 class="mb-0">FAQS</h3>
-            </div>
-            <div class="link-animated d-flex flex-column justify-content-start">
-              <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="/faq1.html"><i
-                  class="bi bi-arrow-right me-2"></i>General Admission Questions</a>
-              
-            </div>
-          </div>
-          <!-- Category End -->
-
-          <!-- Recent Post Start -->
-          <!-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Recent Post</h3>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://img.freepik.com/free-photo/three-gradutes-friends-graduation-gowns-walking-campus_496169-1286.jpg?t=st=1736480386~exp=1736483986~hmac=f01f4a8f94de5fc4839611bae4739f94ad54df486a4f14d998509145de0cac3f&w=2000 style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://i.pinimg.com/236x/12/53/4f/12534fb4887f2a6ea0e4b87f71055444.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://img.freepik.com/free-photo/beautiful-cheerful-african-female-graduate-smiling-holding-books-copy-space_176420-14338.jpg?t=st=1736479843~exp=1736483443~hmac=da2ade72eaeada87510d33d5faab1428bdbde91034056f0dee888a7c17166af8&w=2000" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://i.pinimg.com/236x/9b/6a/a2/9b6aa2e6ca9519b06cd344d230427a17.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://i.pinimg.com/564x/e2/f3/b4/e2f3b441bd14121e17286365f1cd7e5a.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="https://i.pinimg.com/236x/f0/48/ca/f048ca0e739d89312defd1c958c6d0f6.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                    </div> -->
-          <!-- Recent Post End -->
-
-          <!-- Image Start -->
-          <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-            <img src="img/blog-1.jpg" alt="" class="img-fluid rounded" />
-          </div>
-          <!-- Image End -->
-
-          <!-- Tags Start -->
-          <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-              <h3 class="mb-0">Tag Cloud</h3>
-            </div>
-            <div class="d-flex flex-wrap m-n1">
-              <a href="" class="btn btn-light m-1">SOP</a>
-              <a href="" class="btn btn-light m-1">CV</a>
-              <a href="" class="btn btn-light m-1">RESUME</a>
-              <a href="" class="btn btn-light m-1">RESEEARCH</a>
-              <a href="" class="btn btn-light m-1">FUNDING</a>
-              <a href="" class="btn btn-light m-1">VAT/FIRS</a>
-              <a href="" class="btn btn-light m-1">CPD</a>
-              <a href="" class="btn btn-light m-1">ADMISSIONS</a>
-              <a href="" class="btn btn-light m-1">PAYE</a>
-              <a href="" class="btn btn-light m-1">DATA-ANALYTICS</a>
-              <a href="" class="btn btn-light m-1">COVER LETTER</a>
-              <a href="" class="btn btn-light m-1">PROOF READING</a>
-            </div>
-          </div>
-          <!-- Tags End -->
-
-          <!-- Plain Text Start -->
-          <div class="wow slideInUp" data-wow-delay="0.1s">
-            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-              <h3 class="mb-0">A-COO</h3>
-            </div>
-            <div class="bg-light text-center" style="padding: 30px">
-              <p>
-                Our mission is to create your vision through value because,
-                When you help people succeed, you become successful. And when
-                you become successful, you become synonymous with success.
-              </p>
-              <a href="" class="btn btn-primary py-2 px-4">Our Mission</a>
-            </div>
-          </div>
-          <!-- Plain Text End -->
-        </div>
-        <!-- Sidebar End -->
-      </div>
-    </div>
-  </div>
-  <!-- Blog End -->
-
-  <!-- Vendor Start -->
-  <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div> -->
-  <!-- Vendor End -->
-
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
-
-    * {
-      font-family: Open Sans;
-    }
-
-    section {
-      width: 100%;
-      display: inline-block;
-      background: #333;
-      height: 50vh;
+    /* ── Page Hero ── */
+    .page-hero-faq {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #1565c0 100%);
+      padding: 6rem 0 4rem;
       text-align: center;
-      font-size: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero-faq::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero-faq .label {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      text-decoration: underline;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      position: relative;
     }
+    .page-hero-faq h1 { color: #fff; font-size: clamp(2rem,5vw,3rem); margin-bottom: 1rem; position: relative; }
+    .page-hero-faq h1 span { background: linear-gradient(90deg,#ffd700,#ff8c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero-faq p { color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto; font-size: 1.05rem; position: relative; }
 
-    .footer-distributed {
-      background: #17224D;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-      box-sizing: border-box;
+    /* ── Accordion FAQ ── */
+    .faq-section { background: var(--off-white); }
+    .faq-category-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--heading);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    .faq-accordion { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 3rem; }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-md); }
+    .faq-item.open { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15,95,182,0.08); }
+    .faq-trigger {
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      background: none;
+      border: none;
       text-align: left;
-      font: bold 16px sans-serif;
-      padding: 55px 50px;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    /* Footer left */
-
-    .footer-distributed .footer-left {
-      width: 40%;
-    }
-
-    /* The company logo */
-
-    .footer-distributed h3 {
-      color: #ffffff;
-      font: normal 36px 'Open Sans', cursive;
-      margin: 0;
-    }
-
-    .footer-distributed h3 span {
-      color: lightseagreen;
-    }
-
-    /* Footer links */
-
-    .footer-distributed .footer-links {
-      color: #ffffff;
-      margin: 20px 0 12px;
-      padding: 0;
-    }
-
-    .footer-distributed .footer-links a {
-      display: inline-block;
-      line-height: 1.8;
-      font-weight: 400;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .footer-distributed .footer-company-name {
-      color: wheat;
-      font-size: 14px;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    /* Footer Center */
-
-    .footer-distributed .footer-center {
-      width: 35%;
-    }
-
-    .footer-distributed .footer-center i {
-      background-color: #33383b;
-      color: #ffffff;
-      font-size: 25px;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 42px;
-      margin: 10px 15px;
-      vertical-align: middle;
-    }
-
-    .footer-distributed .footer-center p {
-      display: inline-block;
-      color: #ffffff;
-      font-weight: 400;
-      vertical-align: middle;
-      margin: 0;
-    }
-
-    .footer-distributed .footer-center p span {
-      display: block;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .footer-distributed .footer-center p a {
-      color: lightseagreen;
-      text-decoration: underline;
-    }
-
-    .footer-distributed .footer-links a:before {
-      content: "|";
-      font-weight: 300;
-      font-size: 20px;
-      left: 0;
-      color: #fff;
-      display: inline-block;
-      padding-right: 5px;
-    }
-
-    .footer-distributed .footer-links .link-1:before {
-      content: none;
-    }
-
-    /* Footer Right */
-
-    .footer-distributed .footer-right {
-      width: 20%;
-    }
-
-    .footer-distributed .footer-company-about {
-      line-height: 20px;
-      color: #92999f;
-      font-size: 13px;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    .footer-distributed .footer-company-about span {
-      display: block;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .footer-distributed .footer-icons {
-      margin-top: 25px;
-    }
-
-    .footer-distributed .footer-icons a {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
       cursor: pointer;
-      background-color: #17224D;
-      border-radius: 2px;
-
-      font-size: 20px;
-      color: #ffffff;
-      text-align: center;
-      line-height: 35px;
-
-      margin-right: 3px;
-      margin-bottom: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--heading);
     }
+    .faq-trigger .faq-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .faq-trigger .faq-q { flex: 1; }
+    .faq-trigger .faq-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--off-white);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.25s, transform 0.3s;
+    }
+    .faq-item.open .faq-trigger .faq-icon { background: var(--primary); transform: rotate(45deg); }
+    .faq-trigger .faq-icon svg { width: 14px; height: 14px; color: var(--text-muted); transition: color 0.25s; }
+    .faq-item.open .faq-trigger .faq-icon svg { color: #fff; }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-body-inner {
+      padding: 0 1.5rem 1.25rem 4rem;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.8;
+    }
+    .faq-body-inner ol, .faq-body-inner ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+    .faq-body-inner li { margin-bottom: 0.35rem; }
 
-    /* If you don't want the footer to be responsive, remove these media queries */
+    /* ── Contact Prompt ── */
+    .faq-cta {
+      background: linear-gradient(135deg, var(--dark-blue), #1565c0);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .faq-cta h3 { color: #fff; margin-bottom: 0.75rem; }
+    .faq-cta p { color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
 
-    @media (max-width: 880px) {
-
-      .footer-distributed {
-        font: bold 14px sans-serif;
-      }
-
-      .footer-distributed .footer-left,
-      .footer-distributed .footer-center,
-      .footer-distributed .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-      }
-
-      .footer-distributed .footer-center i {
-        margin-left: 0;
-      }
-
+    @media (max-width: 768px) {
+      .faq-body-inner { padding-left: 1.5rem; }
     }
   </style>
+</head>
+<body>
 
-  <!-- Footer Start -->
-  <footer class="footer-distributed">
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo" aria-label="A-COO Edu Consults Home">
+      <img src="img/logo.png" alt="A-COO Edu Consults Logo" onerror="this.style.display='none'" />
+      <span>A-COO Edu Consults</span>
+    </a>
+    <div class="navbar-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true">
+            Services
+            <svg fill="none" viewBox="0 0 16 16"><path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="service.html" class="dropdown-item">Research &amp; Research Analyses</a>
+            <a href="service1.html" class="dropdown-item">Admissions &amp; International Studies</a>
+            <a href="service2.html" class="dropdown-item">Jobs &amp; Career Assistance</a>
+            <a href="service3.html" class="dropdown-item">Academic &amp; Publication Assistance</a>
+            <a href="service4.html" class="dropdown-item">Business Partnership &amp; Assistance</a>
+            <a href="service5.html" class="dropdown-item">Digital &amp; Distant Learning</a>
+            <a href="service6.html" class="dropdown-item">Study Loan &amp; Finance</a>
+            <a href="service7.html" class="dropdown-item">Accounts &amp; Financial Services</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true">
+            Pages
+            <svg fill="none" viewBox="0 0 16 16"><path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="faq.html" class="dropdown-item">FAQ</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="course/courses.html" class="nav-link">Courses</a></li>
+        <li class="nav-item"><a href="scholarship.html" class="nav-link">Scholarship Corner</a></li>
+      </ul>
+    </div>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="contact.html" class="btn btn-primary btn-sm navbar-cta">Contact Us
+        <svg fill="none" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+      </a>
+      <button class="navbar-toggle" id="nav-toggle" aria-label="Open menu">
+        <svg fill="none" viewBox="0 0 24 24"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
 
-    <div class="footer-left">
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="navbar-logo">
+      <img src="img/logo.png" alt="A-COO" onerror="this.style.display='none'" style="height:42px;width:auto;" />
+      <span>A-COO Edu Consults</span>
+    </a>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg fill="none" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <div class="mobile-nav-group">
+      <div class="mobile-nav-group-label">Services <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></div>
+      <div class="mobile-sub-links">
+        <a href="service.html" class="mobile-sub-link">Research &amp; Analyses</a>
+        <a href="service1.html" class="mobile-sub-link">Admissions &amp; International Studies</a>
+        <a href="service2.html" class="mobile-sub-link">Jobs &amp; Career Assistance</a>
+        <a href="service3.html" class="mobile-sub-link">Academic &amp; Publication Assistance</a>
+        <a href="service4.html" class="mobile-sub-link">Business Partnership &amp; Assistance</a>
+        <a href="service5.html" class="mobile-sub-link">Digital &amp; Distant Learning</a>
+        <a href="service6.html" class="mobile-sub-link">Study Loan &amp; Finance</a>
+        <a href="service7.html" class="mobile-sub-link">Accounts &amp; Financial Services</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <div class="mobile-nav-group-label">Pages <svg fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></div>
+      <div class="mobile-sub-links">
+        <a href="faq.html" class="mobile-sub-link active">FAQ</a>
+        <a href="testimonial.html" class="mobile-sub-link">Testimonials</a>
+      </div>
+    </div>
+    <a href="course/courses.html" class="mobile-nav-link">Courses</a>
+    <a href="scholarship.html" class="mobile-nav-link">Scholarship Corner</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
+  <div class="mobile-nav-footer">
+    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Us</a>
+  </div>
+</div>
 
-      <img src="./img/logo.jpeg" width="60" height="60" alt="company's logo">
-      <p class="footer-links">
-        <a href="/index.html" class="link-1">Home</a>
+<!-- ═══ HERO ═══ -->
+<section class="page-hero-faq">
+  <div class="container">
+    <div class="label">Help Centre</div>
+    <h1>Frequently Asked <span>Questions</span></h1>
+    <p>Everything you need to know about our services, processes, and how we can help you achieve your goals.</p>
+  </div>
+</section>
 
-        
+<!-- ═══ FAQ CONTENT ═══ -->
+<section class="faq-section section-pad">
+  <div class="container" style="max-width:860px;">
 
-        <a href="/about.html">About</a>
+    <h2 class="faq-category-title">General Questions</h2>
+    <div class="faq-accordion" id="faq-general">
 
-        <a href="contact.html">Contact</a>
-      </p>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">1</span>
+          <span class="faq-q">What services do you render?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          We are an experienced and licensed educational and business consultancy with a speciality in research, local and international studies, educational content and services including materials, visas and training, business management, advisory, assessments and evaluation as well as accounting and marketing services.
+        </div></div>
+      </div>
 
-      <p class="footer-company-name ">ACOO © 2025</p>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">2</span>
+          <span class="faq-q">What countries do you cover for international studies?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Our destinations and areas of coverage include Nigeria, Ghana, South Africa, the United States (US), Australia, the United Kingdom (UK), Canada, and the Netherlands.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">3</span>
+          <span class="faq-q">What is the mode of your services?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Our services are both face-to-face and virtual. We offer consultation and assistance for all services and provide 24/7 customer service as well as chatbot assistance on our website at <a href="http://www.acooconsult.com" style="color:var(--primary);">www.acooconsult.com</a>.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">4</span>
+          <span class="faq-q">What is the cost of your services?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          All services relating to international studies applications are <strong>FREE</strong>, except application fees charged by some schools in the US and Canada.
+        </div></div>
+      </div>
+
     </div>
 
-    <div class="footer-center">
-      <br>
-      <br>
-      <br>
-      <br>
-      <div>
-        <a href="">
-          <p>Terms and Conditions</p>
-        </a>
+    <h2 class="faq-category-title">Admissions &amp; International Studies</h2>
+    <div class="faq-accordion" id="faq-admissions">
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">5</span>
+          <span class="faq-q">What services are included in the admission for international study services?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p>We provide a tailored career and university choice guide based on your individual situation. We recommend courses and institutions based on proximity, client preferences, suitability, conditions, demands, and academic prospects. Services include a review of:</p>
+          <ol>
+            <li>CV and Resume</li>
+            <li>Statement of Purpose (SOP) and Personal Statement (PS)</li>
+            <li>Form fillings</li>
+            <li>Application submission</li>
+            <li>Document review, scanning and uploads</li>
+            <li>Gathering and validation of admission and visa documents</li>
+            <li>Scholarship advisory and funding counselling</li>
+          </ol>
+        </div></div>
       </div>
-      <div>
-        <a href="/privacy.html">
-          <p>Privacy Policy</p>
-        </a>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">6</span>
+          <span class="faq-q">Do you assist with student visa applications?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Yes. We provide guidance on the entire student visa process, including document preparation, submission, accommodation searches, travel planning, and other pre-study preparations to ensure a smooth transition.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">7</span>
+          <span class="faq-q">How long does the admissions process typically take?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Timelines vary depending on the institution and programme. We have achieved admissions in as little as one week and CAS (Confirmation of Acceptance for Studies) in three days for urgent cases. Contact us early to maximise your options.
+        </div></div>
       </div>
 
     </div>
 
-    <div class="footer-right">
-      <br>
-      <p class="footer-company-about">
-        <span>About the company</span>
-        At A-COO Edu Consult, your success is our priority, and our success is dependent on your success
-      </p>
+    <h2 class="faq-category-title">Research &amp; Professional Services</h2>
+    <div class="faq-accordion" id="faq-research">
 
-      <div class="footer-icons">
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">8</span>
+          <span class="faq-q">What research and analysis services do you offer?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          We offer comprehensive research support including academic research assistance, data analysis, dissertation and thesis support, publication assistance, project proposal writing, and peer-reviewed academic consulting for individuals and institutions.
+        </div></div>
+      </div>
 
-        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-outline-light btn-social"
-          href="https://www.facebook.com/profile.php?id=100077806414902&mibextid=ZbWKwL"><i
-            class="fab fa-facebook-f"></i></a>
-        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">9</span>
+          <span class="faq-q">Do you provide accounting and financial services?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Yes. Our accounting and finance division is led by a qualified Chartered Accountant and offers bookkeeping, VAT/FIRS filing, PAYE management, financial reporting, and business financial advisory services.
+        </div></div>
+      </div>
 
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">10</span>
+          <span class="faq-q">Can you help with career development and job placement?</span>
+          <span class="faq-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Absolutely. Our Jobs &amp; Career Assistance service covers CV/resume writing, cover letters, LinkedIn profile optimisation, interview coaching, job application support, and career counselling across various industries and international markets.
+        </div></div>
       </div>
 
     </div>
 
-  </footer>
-  <!-- Footer End -->
+    <!-- CTA -->
+    <div class="faq-cta">
+      <h3>Still have questions?</h3>
+      <p>Our expert team is ready to help. Reach out to us via phone, WhatsApp, or email and we'll get back to you promptly.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">
+        Contact Us
+        <svg fill="none" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+      </a>
+    </div>
 
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+  </div>
+</section>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="A-COO Edu Consults" onerror="this.style.display='none'" />
+        <p>At A-COO Edu Consult, your success is our priority. Established 2015, serving clients across Nigeria, the UK, The Gambia, and beyond.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100077806414902" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="faq.html">FAQ</a>
+          <a href="testimonial.html">Testimonials</a>
+          <a href="course/courses.html">Courses</a>
+          <a href="scholarship.html">Scholarship Corner</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="service.html">Research &amp; Analyses</a>
+          <a href="service1.html">Admissions &amp; Studies</a>
+          <a href="service2.html">Jobs &amp; Career</a>
+          <a href="service4.html">Business Partnership</a>
+          <a href="service5.html">Distant Learning</a>
+          <a href="service7.html">Financial Services</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>info@acooconsults.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>+44 7355 871566 (UK)</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>+234 816 773 3694 (Nigeria)</span>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span>+220 782 9479 (The Gambia)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 A-COO Edu Consults. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
+<div class="whatsapp-float">
+  <a href="https://api.whatsapp.com/send?phone=+447355871566" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L0 24l6.338-1.51A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.882 9.882 0 01-5.036-1.378l-.36-.214-3.735.89.923-3.635-.235-.373A9.883 9.883 0 012.118 12C2.118 6.527 6.527 2.118 12 2.118S21.882 6.527 21.882 12 17.473 21.882 12 21.882z"/></svg>
+  </a>
+</div>
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg fill="none" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</a>
+
+<script>
+  // Accordion
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const body = item.querySelector('.faq-body');
+      const isOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-body').style.maxHeight = null;
+        el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+<script src="js/main.js"></script>
 </body>
-
 </html>

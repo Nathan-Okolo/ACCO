@@ -264,7 +264,7 @@ p { line-height: 1.7; color: var(--text-muted); }
 }
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   left: 0;
   min-width: 260px;
   background: var(--white);
@@ -272,13 +272,26 @@ p { line-height: 1.7; color: var(--text-muted); }
   border-radius: var(--radius);
   box-shadow: var(--shadow-xl);
   padding: 0.5rem;
+  padding-top: 0.75rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: var(--transition);
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   pointer-events: none;
+  /* invisible bridge fills the gap so mouse doesn't escape */
+  margin-top: 0;
 }
-.nav-item:hover .dropdown-menu {
+/* invisible hover bridge — covers the space between trigger and menu */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

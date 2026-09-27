@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Corner | A-COO Edu Consults</title>
+  <meta name="description"
+    content="Explore 100+ verified scholarship links and resources for students worldwide. Find funding for undergraduate, postgraduate, PhD, and study abroad programmes." />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Scholarship Corner Styles */
+    .scholarship-hero {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #0f5fb6 50%, #21b24f 100%);
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scholarship-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .scholarship-hero h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .scholarship-hero h1 span {
+      background: linear-gradient(90deg, #ffd700, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .scholarship-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      position: relative;
+    }
+
+    .scholarship-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .scholarship-hero .hero-badge span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #21b24f;
+      animation: pulse-dot 2s infinite;
+    }
+
+    /* Search / Filter */
+    .scholarship-search {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      position: relative;
+    }
+
+    .scholarship-search input {
+      width: 100%;
+      padding: 1rem 1.5rem 1rem 3rem;
+      border-radius: 100px;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+
+    .scholarship-search input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .scholarship-search input:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .scholarship-search svg {
+      position: absolute;
+      left: 1.1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Category tabs */
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .category-tab {
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .category-tab:hover,
+    .category-tab.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Scholarship grid */
+    .scholarship-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .scholarship-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .scholarship-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 20px rgba(15, 95, 182, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .scholarship-card .sc-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    .scholarship-card .sc-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .scholarship-card .sc-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--heading);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .scholarship-card .sc-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .scholarship-card .sc-arrow {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--text-muted);
+      transition: all 0.3s;
+    }
+
+    .scholarship-card:hover .sc-arrow {
+      color: var(--primary);
+      transform: translateX(3px);
+    }
+
+    /* Stats strip */
+    .sc-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .sc-stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .sc-stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .sc-stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+      display: none;
+      grid-column: 1 / -1;
+    }
+
+    .no-results svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+      opacity: 0.4;
+    }
+
+    @media (max-width: 768px) {
+      .scholarship-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true; s1.src = 'https://embed.tawk.to/64f9f19aa91e863a5c123aad/1h9o5fhi2';
+      s1.charset = 'UTF-8'; s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="A-COO Edu Consults Home">
+        <img src="img/logo.png" alt="A-COO Edu Consults Logo" onerror="this.style.display='none'" />
+        <span>A-COO Edu Consults</span>
+      </a>
+
+      <div class="navbar-center">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true">
+              Services
+              <svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="service.html" class="dropdown-item">Research &amp; Research Analyses</a>
+              <a href="service1.html" class="dropdown-item">Admissions &amp; International Studies</a>
+              <a href="service2.html" class="dropdown-item">Jobs &amp; Career Assistance</a>
+              <a href="service3.html" class="dropdown-item">Academic &amp; Publication Assistance</a>
+              <a href="service4.html" class="dropdown-item">Business Partnership &amp; Assistance</a>
+              <a href="service5.html" class="dropdown-item">Digital &amp; Distant Learning</a>
+              <a href="service6.html" class="dropdown-item">Study Loan &amp; Finance</a>
+              <a href="service7.html" class="dropdown-item">Accounts &amp; Financial Services</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link dropdown-trigger" aria-haspopup="true">
+              Pages
+              <svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6.5L8 10L12 6.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="faq.html" class="dropdown-item">FAQ</a>
+              <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="course/courses.html" class="nav-link">Courses</a></li>
+        </ul>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <a href="contact.html" class="btn btn-primary btn-sm navbar-cta">Contact Us
+          <svg fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.8" />
+          </svg>
+        </a>
+        <button class="navbar-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="mobile-nav"
+          aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/logo.png" alt="A-COO" onerror="this.style.display='none'" style="height:42px;width:auto;" />
+        <span>A-COO Edu Consults</span>
+      </a>
+      <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+        <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="course/courses.html" class="mobile-nav-link">Courses</a>
+      <a href="scholarship.html" class="mobile-nav-link active">Scholarship Corner</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     SCHOLARSHIP HERO
+     ============================================================ -->
+  <section class="scholarship-hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span></span>
+        100+ Verified Scholarship Resources
+      </div>
+      <h1>Scholarship <span>Corner</span></h1>
+      <p>Your gateway to verified scholarship opportunities worldwide. From undergraduate to PhD, from local to
+        international — find the right funding for your academic journey.</p>
+
+      <div class="scholarship-search">
+        <svg fill="none" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+          <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+        </svg>
+        <input type="text" id="scholarship-search" placeholder="Search scholarships by name or keyword..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     STATS
+     ============================================================ -->
+  <section class="section-pad-lg" style="background:var(--off-white);">
+    <div class="container">
+      <div class="sc-stats fade-up">
+        <div class="sc-stat">
+          <div class="sc-stat-number">100+</div>
+          <div class="sc-stat-label">Verified Scholarship Links</div>
+        </div>
+        <div class="sc-stat">
+          <div class="sc-stat-number">30+</div>
+          <div class="sc-stat-label">Countries Covered</div>
+        </div>
+        <div class="sc-stat">
+          <div class="sc-stat-number">All</div>
+          <div class="sc-stat-label">Academic Levels</div>
+        </div>
+        <div class="sc-stat">
+          <div class="sc-stat-number">Free</div>
+          <div class="sc-stat-label">To Access &amp; Apply</div>
+        </div>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs" id="category-tabs">
+        <button class="category-tab active" data-cat="all">All Scholarships</button>
+        <button class="category-tab" data-cat="general">General</button>
+        <button class="category-tab" data-cat="government">Government &amp; National</button>
+        <button class="category-tab" data-cat="research">Research &amp; PhD</button>
+        <button class="category-tab" data-cat="studyabroad">Study Abroad</button>
+        <button class="category-tab" data-cat="diversity">Diversity &amp; Inclusion</button>
+        <button class="category-tab" data-cat="opportunities">Opportunities &amp; Portals</button>
+      </div>
+
+      <!-- Scholarship Grid -->
+      <div class="scholarship-grid" id="scholarship-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+      <div class="no-results" id="no-results">
+        <svg fill="none" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+          <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+        </svg>
+        <p>No scholarships match your search. Try a different keyword.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CTA
+     ============================================================ -->
+  <section class="section-pad" style="background:linear-gradient(135deg, var(--dark-blue), #0f5fb6);">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#fff; margin-bottom:1rem;">Need Help Applying for Scholarships?</h2>
+      <p style="color:rgba(255,255,255,0.8); max-width:550px; margin:0 auto 2rem;">Our expert team can guide you through
+        the entire application process — from finding the right scholarship to submitting a winning application.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">
+        Get Expert Guidance
+        <svg fill="none" viewBox="0 0 20 20">
+          <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="1.8" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="A-COO Edu Consults" onerror="this.style.display='none'" />
+          <p>At A-COO Edu Consult, your success is our priority. We are a contemporary education and business consulting
+            firm established in 2015 with expertise across research, admissions, careers, and finance.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100077806414902" aria-label="Facebook" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="testimonial.html">Testimonials</a>
+            <a href="course/courses.html">Courses</a>
+            <a href="scholarship.html">Scholarship Corner</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="service.html">Research &amp; Analyses</a>
+            <a href="service1.html">Admissions &amp; Studies</a>
+            <a href="service2.html">Jobs &amp; Career</a>
+            <a href="service4.html">Business Partnership</a>
+            <a href="service5.html">Distant Learning</a>
+            <a href="service7.html">Financial Services</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke="currentColor" stroke-width="1.8" />
+              </svg></div>
+            <span>info@acooconsults.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  stroke="currentColor" stroke-width="1.8" />
+              </svg></div>
+            <span>+44 7355 871566 (UK)</span>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  stroke="currentColor" stroke-width="1.8" />
+              </svg></div>
+            <span>+234 816 773 3694 (Nigeria)</span>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  stroke="currentColor" stroke-width="1.8" />
+              </svg></div>
+            <span>+220 782 9479 (The Gambia)</span>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg fill="none" viewBox="0 0 24 24">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  stroke="currentColor" stroke-width="1.8" />
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="1.8" />
+              </svg></div>
+            <span>United Kingdom · Nigeria · The Gambia</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 A-COO Edu Consults. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <a href="https://api.whatsapp.com/send?phone=+447355871566" target="_blank" rel="noopener"
+      aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L0 24l6.338-1.51A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.882 9.882 0 01-5.036-1.378l-.36-.214-3.735.89.923-3.635-.235-.373A9.883 9.883 0 012.118 12C2.118 6.527 6.527 2.118 12 2.118S21.882 6.527 21.882 12 17.473 21.882 12 21.882z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Back to top -->
+  <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg fill="none" viewBox="0 0 24 24">
+      <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+    </svg>
+  </a>
+
+  <script>
+    // Scholarship data
+    const scholarships = [
+      { name: "Scholarships.com", url: "https://www.scholarships.com", cat: "general" },
+      { name: "ScholarshipPortal.com", url: "https://www.scholarshipportal.com", cat: "general" },
+      { name: "ScholarshipAmerica.org", url: "https://www.scholarshipamerica.org", cat: "general" },
+      { name: "CollegeScholarships.org", url: "https://www.collegescholarships.org", cat: "general" },
+      { name: "InternationalScholarships.com", url: "https://www.internationalscholarships.com", cat: "general" },
+      { name: "Scholarship-Positions.com", url: "https://www.scholarship-positions.com", cat: "general" },
+      { name: "Scholarship360.org", url: "https://www.scholarship360.org", cat: "general" },
+      { name: "ScholarshipCafe.com", url: "https://www.scholarshipcafe.com", cat: "general" },
+      { name: "ScholarshipsForHispanics.org", url: "https://www.scholarshipsforhispanics.org", cat: "diversity" },
+      { name: "BlackScholarships.org", url: "https://www.blackscholarships.org", cat: "diversity" },
+      { name: "Scholarships4Moms.net", url: "https://www.scholarships4moms.net", cat: "diversity" },
+      { name: "Scholarships4Dads.com", url: "https://www.scholarships4dads.com", cat: "diversity" },
+      { name: "Scholars4Dev.com", url: "https://www.scholars4dev.com", cat: "general" },
+      { name: "ScholarshipsOwl.com", url: "https://www.scholarshipsowl.com", cat: "general" },
+      { name: "Fastweb.com", url: "https://www.fastweb.com", cat: "general" },
+      { name: "CollegeBoard.org", url: "https://www.collegeboard.org", cat: "general" },
+      { name: "Petersons.com", url: "https://www.petersons.com", cat: "general" },
+      { name: "Chevening.org", url: "https://www.chevening.org", desc: "UK Government Scholarships", cat: "government" },
+      { name: "DAAD.de", url: "https://www.daad.de", desc: "German Academic Exchange Service", cat: "government" },
+      { name: "FulbrightOnline.org", url: "https://www.fulbrightonline.org", desc: "Fulbright Scholarships", cat: "government" },
+      { name: "FindAPhD.com", url: "https://www.findaphd.com", desc: "PhD Scholarships", cat: "research" },
+      { name: "GradSchools.com", url: "https://www.gradschools.com", desc: "Graduate School Scholarships", cat: "research" },
+      { name: "PhDPortal.com", url: "https://www.phdportal.com", desc: "International PhD Scholarships", cat: "research" },
+      { name: "StudyAbroad.com", url: "https://www.studyabroad.com", desc: "Study Abroad Scholarships", cat: "studyabroad" },
+      { name: "IEFA.org", url: "https://www.iefa.org", desc: "International Financial Aid & College Scholarship Search", cat: "general" },
+      { name: "EducationUSA.state.gov", url: "https://educationusa.state.gov", desc: "U.S. Department of State", cat: "government" },
+      { name: "Cappex.com", url: "https://www.cappex.com", cat: "general" },
+      { name: "Unigo.com", url: "https://www.unigo.com", cat: "general" },
+      { name: "Niche.com", url: "https://www.niche.com", cat: "general" },
+      { name: "Zinch.com", url: "https://www.zinch.com", cat: "general" },
+      { name: "MoolahSPOT.com", url: "https://www.moolahspot.com", cat: "general" },
+      { name: "AcademicPositions.com", url: "https://www.academicpositions.com", cat: "research" },
+      { name: "HigherEdJobs.com", url: "https://www.higheredjobs.com", cat: "research" },
+      { name: "Idealist.org", url: "https://www.idealist.org", desc: "Scholarships for Social Impact Careers", cat: "diversity" },
+      { name: "EduPass.org", url: "https://www.edupass.org", desc: "For International Students", cat: "studyabroad" },
+      { name: "InternationalStudent.com", url: "https://www.internationalstudent.com", cat: "studyabroad" },
+      { name: "Study.com Scholarships", url: "https://study.com/pages/scholarships.html", cat: "general" },
+      { name: "BorenAwards.org", url: "https://www.borenawards.org", desc: "National Security Education Program", cat: "government" },
+      { name: "GilmanScholarship.org", url: "https://www.gilmanscholarship.org", desc: "For Students Studying Abroad", cat: "studyabroad" },
+      { name: "MarshallScholarship.org", url: "https://www.marshallscholarship.org", cat: "government" },
+      { name: "RhodesTrust.ox.ac.uk", url: "https://www.rhodestrust.ox.ac.uk", desc: "Rhodes Scholarships", cat: "government" },
+      { name: "GatesCambridge.org", url: "https://www.gatescambridge.org", desc: "Gates Cambridge Scholarships", cat: "government" },
+      { name: "NationalMerit.org", url: "https://www.nationalmerit.org", desc: "National Merit Scholarships", cat: "government" },
+      { name: "JackKentCookeFoundation.org", url: "https://www.jkcf.org", cat: "general" },
+      { name: "TheDream.US", url: "https://www.thedream.us", desc: "Scholarships for Dreamers", cat: "diversity" },
+      { name: "AAUW.org", url: "https://www.aauw.org", desc: "American Association of University Women", cat: "diversity" },
+      { name: "Rotary.org", url: "https://www.rotary.org", desc: "Rotary Foundation Scholarships", cat: "general" },
+      { name: "QuestBridge.org", url: "https://www.questbridge.org", desc: "For High School Seniors", cat: "general" },
+      { name: "HispanicScholarshipFund.org", url: "https://www.hsf.net", cat: "diversity" },
+      { name: "APIASF.org", url: "https://www.apiasf.org", desc: "Asian & Pacific Islander American Scholarship Fund", cat: "diversity" },
+      { name: "UNCF.org", url: "https://uncf.org", desc: "United Negro College Fund", cat: "diversity" },
+      { name: "OpportunitiesDesk.org", url: "https://opportunitiesdesk.org", cat: "opportunities" },
+      { name: "YouthOpportunities.com", url: "https://www.youthopportunities.com", cat: "opportunities" },
+      { name: "OpportunityPortal.info", url: "https://www.opportunityportal.info", cat: "opportunities" },
+      { name: "BrightScholarships.com", url: "https://www.brightscholarships.com", cat: "general" },
+      { name: "WorldScholarshipForum.com", url: "https://www.worldscholarshipforum.com", cat: "general" },
+      { name: "DisabilityAwards.ca", url: "https://www.disabilityawards.ca", desc: "For Students with Disabilities (Canada)", cat: "diversity" },
+      { name: "ResearchGate.net", url: "https://www.researchgate.net", desc: "Research and PhD Scholarships", cat: "research" },
+      { name: "EuroScholars.eu", url: "https://www.euroscholars.eu", desc: "European Research Scholarships", cat: "research" },
+      { name: "Euraxess.ec.europa.eu", url: "https://euraxess.ec.europa.eu", desc: "European Research Scholarships", cat: "research" },
+      { name: "CSC.edu.cn", url: "https://www.csc.edu.cn", desc: "Chinese Government Scholarships", cat: "government" },
+      { name: "JASSO.go.jp", url: "https://www.jasso.go.jp", desc: "Japan Student Services Organisation", cat: "government" },
+      { name: "StudyInSweden.se", url: "https://studyinsweden.se", desc: "Scholarships for Studying in Sweden", cat: "studyabroad" },
+      { name: "StudyInNorway.no", url: "https://www.studyinnorway.no", desc: "Scholarships for Studying in Norway", cat: "studyabroad" },
+      { name: "StudyInDenmark.dk", url: "https://studyindenmark.dk", desc: "Scholarships for Studying in Denmark", cat: "studyabroad" },
+      { name: "StudyInCanada.ca", url: "https://www.studyincanada.ca", desc: "Scholarships for Studying in Canada", cat: "studyabroad" },
+      { name: "AFS.org", url: "https://www.afs.org", desc: "Intercultural Programs Scholarships", cat: "studyabroad" },
+      { name: "EUSA.ed.ac.uk", url: "https://www.eusa.ed.ac.uk", desc: "Scholarships for Studying in Europe", cat: "studyabroad" },
+      { name: "NSF.gov", url: "https://www.nsf.gov", desc: "National Science Foundation Scholarships", cat: "government" },
+      { name: "NIH.gov", url: "https://www.nih.gov", desc: "National Institutes of Health Scholarships", cat: "government" },
+      { name: "NAACP.org", url: "https://www.naacp.org", desc: "Scholarships for African American Students", cat: "diversity" },
+      { name: "Elks.org", url: "https://www.elks.org", desc: "Elks National Foundation Scholarships", cat: "general" },
+      { name: "LendEDU.com", url: "https://lendedu.com", desc: "Scholarships and Financial Aid Resources", cat: "general" },
+      { name: "GoAbroad.com", url: "https://www.goabroad.com", desc: "Study Abroad Scholarships", cat: "studyabroad" },
+      { name: "MinorityScholarships.org", url: "https://www.minorityscholarships.org", desc: "Scholarships for Minority Students", cat: "diversity" },
+      { name: "Disabled-World.com", url: "https://www.disabled-world.com", desc: "Scholarships for Students with Disabilities", cat: "diversity" },
+      { name: "ScholarshipsAndGrants.us", url: "https://www.scholarshipsandgrants.us", cat: "general" },
+      { name: "StudentsScholarships.org", url: "https://www.studentsscholarships.org", cat: "general" },
+      { name: "SuperCollege.com", url: "https://www.supercollege.com", cat: "general" },
+      { name: "TUN.com", url: "https://www.tun.com", desc: "The University Network", cat: "general" },
+      { name: "GoodCall.com", url: "https://www.goodcall.com", cat: "general" },
+      { name: "ScholarshipsTree.com", url: "https://www.scholarshipstree.com", cat: "general" },
+      { name: "GrantMe.ca", url: "https://www.grantme.ca", desc: "Canadian Scholarships", cat: "studyabroad" },
+      { name: "ScholarshipJunkies.org", url: "https://www.scholarshipjunkies.org", cat: "general" },
+      { name: "IIE.org", url: "https://www.iie.org", desc: "Institute of International Education", cat: "studyabroad" },
+      { name: "CERN.ch", url: "https://home.cern", desc: "Scholarships for Research at CERN", cat: "research" },
+      { name: "GatesFoundation.org", url: "https://www.gatesfoundation.org", cat: "general" },
+      { name: "Chegg.com Scholarships", url: "https://www.chegg.com/scholarships", cat: "general" },
+      { name: "ResearchCouncils.uk", url: "https://www.ukri.org", desc: "UK Research and Innovation", cat: "research" },
+      { name: "MarieCurie.org", url: "https://marie-sklodowska-curie-actions.ec.europa.eu", desc: "Marie Curie Fellowships", cat: "research" },
+      { name: "AsiaResearchNews.com", url: "https://www.asiaresearchnews.com", desc: "Research Scholarships in Asia", cat: "research" },
+      { name: "AsiaEuropeFoundation.org", url: "https://www.asef.org", desc: "Asia-Europe Meeting Scholarships", cat: "studyabroad" },
+      { name: "VFW.org", url: "https://www.vfw.org", desc: "Veterans of Foreign Wars Scholarships", cat: "diversity" },
+      { name: "AISES.org", url: "https://www.aises.org", desc: "American Indian Science and Engineering Society", cat: "diversity" },
+      { name: "HispanicHeritage.org", url: "https://www.hispanicheritage.org", desc: "Hispanic Heritage Foundation Scholarships", cat: "diversity" },
+      { name: "FindAMasters.com", url: "https://www.findamasters.com", desc: "Masters Scholarships", cat: "research" },
+      { name: "HRC.org", url: "https://www.hrc.org", desc: "Human Rights Campaign Scholarships", cat: "diversity" },
+      { name: "Bold.org", url: "https://bold.org", desc: "Exclusive Scholarships", cat: "general" },
+      { name: "ScholarshipRegion.com", url: "https://www.scholarshipregion.com", cat: "opportunities" },
+      { name: "FindAMasters.com", url: "https://www.findamasters.com", cat: "research" },
+    ];
+
+    const grid = document.getElementById('scholarship-grid');
+    const searchInput = document.getElementById('scholarship-search');
+    const tabs = document.querySelectorAll('.category-tab');
+    const noResults = document.getElementById('no-results');
+    let activeCategory = 'all';
+
+    function renderScholarships(filter = '') {
+      const filtered = scholarships.filter(s => {
+        const matchesCat = activeCategory === 'all' || s.cat === activeCategory;
+        const matchesSearch = !filter || s.name.toLowerCase().includes(filter) || (s.desc && s.desc.toLowerCase().includes(filter));
+        return matchesCat && matchesSearch;
+      });
+
+      grid.innerHTML = '';
+      if (filtered.length === 0) {
+        noResults.style.display = 'block';
+        return;
+      }
+      noResults.style.display = 'none';
+
+      filtered.forEach((s, i) => {
+        const card = document.createElement('a');
+        card.href = s.url;
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.className = 'scholarship-card';
+        card.innerHTML = `
+      <div class="sc-num">${i + 1}</div>
+      <div class="sc-info">
+        <div class="sc-name">${s.name}</div>
+        ${s.desc ? `<div class="sc-desc">${s.desc}</div>` : ''}
+      </div>
+      <svg class="sc-arrow" fill="none" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+    `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Search
+    searchInput.addEventListener('input', (e) => {
+      renderScholarships(e.target.value.toLowerCase().trim());
+    });
+
+    // Category tabs
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeCategory = tab.dataset.cat;
+        renderScholarships(searchInput.value.toLowerCase().trim());
+      });
+    });
+
+    // Initial render
+    renderScholarships();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
