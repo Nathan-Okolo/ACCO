@@ -214,6 +214,7 @@ p { line-height: 1.7; color: var(--text-muted); }
   width: auto;
 }
 .navbar-logo span {
+  display: none;
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--dark-blue);
