@@ -48,6 +48,7 @@
 
     .founder-images {
       position: relative;
+      width: 100%;
       aspect-ratio: 1/1;
     }
 
@@ -172,9 +173,22 @@
       }
 
       .founder-images {
-        aspect-ratio: 4/3;
+        position: static;
+        aspect-ratio: auto;
         max-width: 480px;
         margin: 0 auto;
+      }
+
+      .founder-img-main {
+        position: static;
+        width: 100%;
+        aspect-ratio: 4/3;
+      }
+
+      .founder-img-secondary {
+        position: relative;
+        width: 42%;
+        margin: -2.5rem 0 0 1rem;
       }
     }
   </style>
