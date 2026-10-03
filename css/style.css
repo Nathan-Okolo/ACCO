@@ -1075,6 +1075,48 @@ textarea.form-input { min-height: 130px; resize: vertical; }
 .form-submit { width: 100%; margin-top: 0.5rem; }
 
 /* ========================================
+   OFFICES
+   ======================================== */
+.offices-section { background: var(--bg-off-white); }
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.office-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  border-left: 4px solid var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.office-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.office-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.office-card-row:last-child { margin-bottom: 0; }
+.office-card-row svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.office-card-row a { color: var(--text-muted); }
+.office-card-row a:hover { color: var(--primary); }
+
+/* ========================================
    PARTNERS
    ======================================== */
 .partners-section { background: var(--white); }
@@ -1403,6 +1445,7 @@ textarea.form-input { min-height: 130px; resize: vertical; }
   .form-row { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .team-card.founder { grid-column: span 2; }
+  .offices-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
   .hero-ctas { flex-direction: column; }
@@ -1410,4 +1453,5 @@ textarea.form-input { min-height: 130px; resize: vertical; }
   .team-grid { grid-template-columns: 1fr; }
   .team-card.founder { grid-column: span 1; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
+  .offices-grid { grid-template-columns: 1fr; }
 }
