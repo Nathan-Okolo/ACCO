@@ -415,9 +415,10 @@ p { line-height: 1.7; color: var(--text-muted); }
   background: #050505;
 }
 .hero-bg {
+  /* Photo: University of the Fraser Valley, CC BY 2.0 — https://www.flickr.com/photos/ufv/20469374203/ */
   position: absolute;
   inset: 0;
-  background-image: url('../img/hero-bg.png');
+  background-image: url('../img/hero-bg-students.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.35;
