@@ -1122,6 +1122,38 @@ textarea.form-input { min-height: 130px; resize: vertical; }
 .office-card-row a:hover { color: var(--primary); }
 
 /* ========================================
+   PROSE CONTENT (legal / article pages)
+   ======================================== */
+.prose-content { max-width: 780px; margin: 0 auto; }
+.prose-content h2 { margin: 2.5rem 0 1rem; }
+.prose-content h2:first-child { margin-top: 0; }
+.prose-content h3 { margin: 2rem 0 0.75rem; }
+.prose-content p { margin-bottom: 1.25rem; }
+.prose-content ul, .prose-content ol { margin: 0 0 1.25rem 1.25rem; }
+.prose-content ul { list-style: disc; }
+.prose-content ol { list-style: decimal; }
+.prose-content li { margin-bottom: 0.5rem; line-height: 1.7; color: var(--text-muted); }
+.prose-content li strong { color: var(--text); }
+.prose-content a { color: var(--primary); text-decoration: underline; }
+.prose-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.875rem; }
+.prose-content th, .prose-content td { border: 1px solid var(--border); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+.prose-content th { background: var(--bg-off-white); font-weight: 700; color: var(--text); }
+.prose-content .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+.prose-content .table-wrap table { margin-bottom: 0; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 2rem; }
+.article-tag { background: var(--primary-light); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.article-date { font-size: 0.85rem; color: var(--text-muted); }
+.prose-sidebar-card { background: var(--bg-off-white); border-radius: var(--radius-lg); padding: 2rem; text-align: center; margin-top: 3rem; }
+.prose-sidebar-card p { margin-bottom: 1.25rem; }
+
+/* Thank-you page */
+.thankyou-section { text-align: center; }
+.thankyou-icon { width: 96px; height: 96px; margin: 0 auto 2rem; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; }
+.thankyou-icon svg { width: 44px; height: 44px; color: var(--primary); }
+.thankyou-section h1 { margin-bottom: 0.75rem; }
+.thankyou-section p { max-width: 480px; margin: 0 auto 2rem; }
+
+/* ========================================
    PARTNERS
    ======================================== */
 .partners-section { background: var(--white); }
