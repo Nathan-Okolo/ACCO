@@ -3,7 +3,8 @@
    ========================================================== */
 
 /* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Loaded via <link> in each page's <head> (with preconnect) instead of @import,
+   so the font request isn't blocked behind this stylesheet loading first. */
 
 /* ---------- CSS Variables ---------- */
 :root {
